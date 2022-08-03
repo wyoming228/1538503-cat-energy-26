@@ -9,7 +9,7 @@
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__wrapper">
-      <a class="main-header__cat-logo">
+      <a class="main-header__cat-logo" href="#">
         <img class="main-header__cat-logo-pic" src="img/logo_cat-energy-pic.svg" width="33" height="37"
           alt="Логотип магазина cat energy с котиком">
       </a>
@@ -36,7 +36,7 @@
   <main class="page-main">
     <section class="nutrition-programm">
       <div class="nutrition-programm__wrapper">
-        <h1 class="nutrition-programm__title">Функциональное
+        <h1 class="nutrition-programm__title heading">Функциональное
           питание для котов</h1>
         <p class="nutrition-programm__slogan">Занялся собой? Займись котом!</p>
         <a class="nutrition-programm__link" href="#">Подобрать программу</a>
@@ -60,8 +60,8 @@
     </section>
     <section class="advantages">
       <div class="advantages__wrapper">
-        <h2 class="advantages__title">Как это работает</h2>
-        <ul class="advantages advantages-lsit">
+        <h2 class="advantages__title heading">Как это работает</h2>
+        <ul class="advantages-lsit">
           <li class="advantages-lsit__item">Функциональное питание
             содержит только полезные
             питательные вещества.
@@ -81,7 +81,7 @@
     </section>
     <section class="results">
       <div class="results__wrapper">
-        <h2 class="results__title">Живой пример</h2>
+        <h2 class="results__title heading">Живой пример</h2>
         <p class="results__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
           Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
           часов в день.</p>
@@ -106,10 +106,12 @@
           </div>
         </dl>
         <p class="results__food-expenses">Затраты на питание: 15 000 РУБ.</p>
-        <label class="results__label visually-hidden" for="range-scale">Было</label>
-        <!--в дальнейшем я бы попробовал "было" "стало" у слайдера сделать псведоэлементами. правда не знаю ок ли это-->
+        <label class="results__label visually-hidden" for="range-scale">Демонстрация результатов</label>
+        <button class="results__toggle-button toggle-min">Было
+        </button>
         <input class="results__range-scale" type="range" min="0" max="15" name="changes-scale" id="range-scale">
-        <span>Стало</span>
+        <button class="results__toggle-button toggle-max">Стало
+        </button>
       </div>
     </section>
   </main>
