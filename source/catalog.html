@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -10,22 +11,25 @@
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__wrapper">
-      <a class="main-header__cat-logo">
-        <img class="main-header__cat-logo-pic" src="img/logo_cat-energy-pic.svg" width="33" height="37"
-          alt="Логотип магазина cat energy с котиком">
-      </a>
-      <a class="main-header__text-logo logo">
-        <img class="logo__image" src="img/logo_cat-energy-text.svg" width="101" height="18"
-          alt="Текстовый логотип магазина cat energy">
-      </a>
-      <button class="main-nav__toggle button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-header__logo-wrapper">
+        <a class="main-header__cat-logo">
+          <img class="main-header__cat-logo-pic" src="img/logo_cat-energy-pic.svg" width="33" height="37"
+            alt="Логотип магазина cat energy с котиком">
+        </a>
+        <a class="main-header__text-logo logo">
+          <img class="logo__image" src="img/logo_cat-energy-text.svg" width="101" height="18"
+            alt="Текстовый логотип магазина cat energy">
+        </a>
+      </div>
+      <button class="main-header__main-nav__toggle button" type="button"><span class="visually-hidden">Открыть
+          меню</span></button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
+        <ul class="main-header__main-nav-list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="index.html">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link  site-list__item--current" href="#">Каталог продукции</a>
+          <li class="site-list__item site-list__item--current">
+            <a class="site-list__link" href="#">Каталог продукции</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="form.html">Подбор программы</a>
@@ -238,32 +242,32 @@
       </div>
     </section>
     <section class="product-extras">
+      <h2 class="product-extras__title">Дополнительные товары</h2>
       <div class="product-extras__wrapper">
-        <h2 class="product-extras__title">Дополнительные товары</h2>
         <ul class="product-extras__list extras-list">
           <li class="extras-list__item">
             <h3 class="extras-list__title">Сахарозаменитель</h3>
             <span class="extras-list__characteristics">1 упаковка (100 г)</span>
             <span class="extras-list__characteristics-value">200 Р.</span>
-            <button class="button--to-chart button">Заказать</button>
+            <button class="button--to-chart button--to-chart-extras button">Заказать</button>
           </li>
           <li class="extras-list__item">
             <h3 class="extras-list__title">Питьевая вода</h3>
             <span class="extras-list__characteristics">5 литров</span>
             <span class="extras-list__characteristics-value">50 Р.</span>
-            <button class="button--to-chart button">Заказать</button>
+            <button class="button--to-chart button--to-chart-extras button">Заказать</button>
           </li>
           <li class="extras-list__item">
             <h3 class="extras-list__title">Молоко</h3>
             <span class="extras-list__characteristics">1 литр</span>
             <span class="extras-list__characteristics-value">100 Р.</span>
-            <button class="button--to-chart button">Заказать</button>
+            <button class="button--to-chart button--to-chart-extras button">Заказать</button>
           </li>
           <li class="extras-list__item">
             <h3 class="extras-list__title">Витамины</h3>
             <span class="extras-list__characteristics">1 упаковка (30 г)</span>
             <span class="extras-list__characteristics-value">300 Р.</span>
-            <button class="button--to-chart button">Заказать</button>
+            <button class="button--to-chart button--to-chart-extras button">Заказать</button>
           </li>
         </ul>
         <div class="product-extras-gifts">
@@ -283,10 +287,12 @@
             Конюшенная, д. 19/8
             Санкт-Петербург</address>
         </div>
-        <iframe class="cooperation__map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1659284223564!5m2!1sru!2sru"
-          width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="cooperation__map-wrapper">
+          <iframe class="cooperation__map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1659284223564!5m2!1sru!2sru"
+            width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
       </section>
       <div class="main-footer__menu-wrapper">
         <div class="main-footer__logo">
