@@ -1,6 +1,22 @@
+.product-extras {
+  width: 280px;
+  padding: 0 20px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 76px;
+  }
+}
+
 .product-extras__wrapper {
-  max-width: 280px;
-  padding: 0 20px 35px;
+  @media (min-width: 768px) {
+    width: auto;
+    padding: 0;
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .product-extras__title {

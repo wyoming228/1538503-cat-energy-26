@@ -4,6 +4,16 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media (min-width: 768px) {
+    padding: 0 36px 39px;
+    background-color: #f2f2f2;
+    margin-bottom: 0;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .product-card__link {
@@ -14,12 +24,21 @@
   max-width: 76px;
   grid-column-start: 2;
   grid-row-start: 1;
+
+  @media (min-width: 768px) {
+    margin: 0 auto;
+  }
 }
 
 .product-card__wrapper {
   display: grid;
   grid-template-columns: 140px 140px;
   row-gap: 13px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .product-card__image {

@@ -1,13 +1,31 @@
 .product-catalog {
-  max-width: 280px;
+  width: 280px;
   padding: 27px 20px 0;
   margin-bottom: 50px;
+
+  @media (min-width: 768px) {
+    padding: 20px 0 0;
+    width: auto;
+  }
 }
 
 .product-catalog__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 143px;
+  }
 }
 
 .product-catalog__title {
@@ -16,4 +34,8 @@
   line-height: 36px;
   font-weight: 400;
   color: #000000;
+
+  @media (min-width: 768px) {
+    margin-bottom: 163px;
+  }
 }

@@ -1,3 +1,15 @@
+.product-extras {
+  @media (min-width: 768px) {
+    width: auto;
+    padding: 0 30px 30px;
+  }
+
+  @media (min-width: 1200px) {
+    width: auto;
+    padding: 0 0 30px;
+  }
+}
+
 .product-extras-gifts {
   width: 280px;
   height: 290px;
@@ -6,6 +18,24 @@
   background-repeat: no-repeat;
   text-align: center;
   background-color: rgba(104, 183, 56, 0.85);
+
+  @media (min-width: 768px) {
+    width: auto;
+    height: 200px;
+    background-image: url("../img/extras-image_tablet.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(104, 183, 56, 0.85);
+  }
+
+  @media (min-width: 1200px) {
+    background-image: url("../img/catalog_gift-case.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(104, 183, 56, 0.85);
+    width: 245px;
+    height: auto;
+  }
 }
 
 .product-extras-gifts__title {
@@ -16,4 +46,8 @@
   max-width: 161px;
   color: #ffffff;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
 }
