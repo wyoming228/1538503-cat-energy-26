@@ -1,14 +1,51 @@
 .product-extras {
   width: 280px;
   padding: 0 20px;
+  position: relative;
 
-  @media (min-width: 768px) {
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 2px;
+      background-color: #68b738;
+      right: 0;
+      top: 14px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 2px;
+      background-color: #68b738;
+      right: 0;
+      top: 22px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 957px;
+      height: 2px;
+      background-color: #68b738;
+      right: -110px;
+      top: 22px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
     padding-bottom: 76px;
   }
 }
 
 .product-extras__wrapper {
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     width: auto;
     padding: 0;
   }
@@ -26,10 +63,40 @@
   line-height: 24px;
   font-weight: 400;
   color: #000000;
+  position: relative;
+  background-color: #ffffff;
+  z-index: 1;
+
+  @media (max-width: @tablet-width) {
+    width: 226px;
+    padding-right: 22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    width: 358px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 81px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 2px;
+    background-color: #68b738;
+    left: -110px;
+    top: 22px;
+  }
 }
+
 
 .product-extras__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+

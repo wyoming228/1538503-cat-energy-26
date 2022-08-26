@@ -3,8 +3,21 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &:last-child {
     margin-bottom: 24px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

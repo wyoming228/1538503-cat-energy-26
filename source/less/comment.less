@@ -1,8 +1,90 @@
+.comment {
+  display: flex;
+  position: relative;
+
+  @media (max-width: @tablet-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 300px;
+      background-color: #68b738;
+      left: 0;
+      top: -48px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 1330px;
+      background-color: #68b738;
+      top: -51px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 70px;
+      background-color: #68b738;
+      top: -51px;
+      left: -110px;
+    }
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 697px;
+      background-color: #68b738;
+      left: 0;
+      top: -50px;
+    }
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 30px;
+      background-color: #68b738;
+      top: -50px;
+      left: -70px;
+    }
+  }
+}
+
 .comment__legend {
   font-size: 24px;
   line-height: 26px;
   color: #000000;
   margin-bottom: 36px;
+  position: relative;
+  background-color: #ffffff;
+  z-index: 1;
+
+  @media (max-width: @tablet-width) {
+    padding-right: 22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    z-index: 1;
+    padding-right: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 40px;
+  }
 }
 
 .comment__field {
@@ -12,4 +94,13 @@
   text-transform: uppercase;
   color: #444444;
   padding: 9px 12px 0;
+  width: 100%;
+  border: 1px #e7e7e7 solid;
+  resize: vertical;
+  flex-grow: 1;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

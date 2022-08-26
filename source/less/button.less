@@ -15,16 +15,17 @@
     margin: 0 auto;
     margin-bottom: 20px;
 
-    @media (min-width: 768px) {
+    @media (min-width: @tablet-width) {
       margin: 0;
       margin-right: auto;
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 400;
     }
-  }
 
-  &--submitt-form-button {
-    border: none;
-    padding: 10px 0;
-    margin-bottom: 21px;
+    @media (min-width: @desktop-width) {
+      padding: 17px 0;
+    }
   }
 }
 
@@ -38,16 +39,32 @@
   padding: 10px 0;
 }
 
-.button--to-chart-extras {
-  @media (min-width: 1200px) {
-    width: 224px;
-  }
-}
-
 .button--all {
   padding: 8px 0;
   text-decoration: none;
   background-color: #f2f2f2;
   color: #444444;
   text-align: center;
+}
+
+.button--to-chart-extras {
+  @media (min-width: 1200px) {
+    width: 224px;
+  }
+}
+
+.button--submitt-form-button {
+  border: none;
+  padding: 10px 0;
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
+    margin-right: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    margin-right: 81px;
+  }
 }

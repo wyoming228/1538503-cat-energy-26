@@ -1,6 +1,21 @@
 .product-card-more {
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  @media (max-width: @tablet-width) {
+    background-color: #ffffff;
+    background-image: url("../img/catalog/more-plus-mobile.png");
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: #ffffff;
+    background-image: url("../img/catalog/more-plus_icon.png");
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+  }
 }
 
 .product-card-more__title {
@@ -11,6 +26,16 @@
   margin: 0 auto;
   margin-bottom: 8px;
   padding-top: 78px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 22px;
+    text-transform: uppercase;
+    width: 134px;
+    text-align: center;
+  }
 }
 
 .product-card-more__text {
@@ -19,4 +44,12 @@
   line-height: 16px;
   margin: 0 auto;
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    width: 167px;
+    text-align: center;
+    margin-bottom: 87px;
+  }
 }

@@ -1,0 +1,24 @@
+.input-styling {
+  border: 1px #cdcdcd solid;
+  padding: 13px 0 13px 16px;
+  width: auto;
+  flex-grow: 1;
+  margin-left: 13px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 22px;
+  }
+}
+
+.input-styling::placeholder {
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

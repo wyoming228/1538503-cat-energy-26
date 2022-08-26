@@ -21,20 +21,15 @@
             alt="Текстовый логотип магазина cat energy">
         </a>
       </div>
-      <button class="main-header__main-nav__toggle button" type="button"><span class="visually-hidden">Открыть
-          меню</span></button>
-      <div class="main-nav__wrapper">
-        <ul class="main-header__main-nav-list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link site-list__item--current" href="#">Подбор программы</a>
-          </li>
-        </ul>
+      <div class="main-nav__wrapper main-nav--closed main-nav--nojs">
+        <button class="main-header__main-nav-toggle button button--toggle" type="button"><span
+            class="visually-hidden">Открыть
+            меню</span></button>
+        <div class="main-header__main-nav-list site-list">
+          <a class="site-list__link" href="index.html">Главная</a>
+          <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+          <a class="site-list__link site-list__link--current" href="#">Подбор программы</a>
+        </div>
       </div>
     </div>
   </header>
@@ -49,13 +44,14 @@
             <fieldset class="programm-selection-form__personal-info personal-info">
               <legend class="personal-info__legend visually-hidden">Личные данные питомца</legend>
               <label class="personal-info__label">ИМЯ:*
-                <input class="personal-info__name" type="text" name="cat-name" placeholder="Барсик">
+
+                <input class="personal-info__name input-styling input-styling--name" type="text" name="cat-name" placeholder="Барсик">
               </label>
               <label class="personal-info__label">Вес (кг):*
-                <input class="personal-info__weight" type="text" name="cat-weight" placeholder="7">
+                <input class="personal-info__weight input-styling" type="text" name="cat-weight" placeholder="7">
               </label>
               <label class="personal-info__label">Возраст (лет):
-                <input class="personal-info__age" type="text" name="cat-age" placeholder="7">
+                <input class="personal-info__age input-styling" type="text" name="cat-age" placeholder="7">
               </label>
             </fieldset>
             <fieldset class="programm-selection-form__programm-type programm-type">
@@ -78,17 +74,17 @@
             <legend class="pet-parent-info__legend">Контактные данные
               (владельца кота)</legend>
             <label class="pet-parent-info__label">E-mail:*
-              <input class="pet-parent-info__input-field" type="email" placeholder="kuklachev@gmail.com"
+              <input class="pet-parent-info__input-field pet-parent-info__input-field--email input-styling" type="email" placeholder="kuklachev@gmail.com"
                 name="pet-parent-email">
             </label>
-            <label>Телефон:*
-              <input class="pet-parent-info__input-field" type="tel" placeholder="8 (960) 900-60-90"
+            <label class="pet-parent-info__label">Телефон:*
+              <input class="pet-parent-info__input-field pet-parent-info__input-field--phone input-styling" type="tel" placeholder="8 (960) 900-60-90"
                 name="pet-parent-phone">
             </label>
           </fieldset>
           <fieldset class="programm-selection-form__comment comment">
             <legend class="comment__legend">Комментарий</legend>
-            <textarea class="comment__field" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="comment__field" placeholder="Расскажите обо всех повадках кота" rows="8"></textarea>
           </fieldset>
           <fieldset class="programm-selection-form__extras extras">
             <legend class="extras__legend">Дополнительно</legend>
@@ -133,7 +129,7 @@
         <div class="cooperation__map-wrapper">
           <iframe class="cooperation__map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1659284223564!5m2!1sru!2sru"
-            width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
+            width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
@@ -186,4 +182,5 @@
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
