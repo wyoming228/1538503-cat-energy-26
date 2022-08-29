@@ -1,5 +1,6 @@
 .advantages-list {
   margin: 0;
+  margin-bottom: 11px;
   padding: 0;
   list-style-type: none;
 
@@ -26,13 +27,189 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+  position: relative;
 
   &:last-child {
     margin-bottom: 0;
   }
 
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
+    &--leaf::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/advantages/icon_leaf.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #68b738;
+      left: 0;
+      top: -3px;
+    }
+
+    &--spoon::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/advantages/spoon.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #68b738;
+      left: 0;
+      top: -3px;
+    }
+
+    &--mix::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/advantages/mix.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #68b738;
+      left: 0;
+      top: -3px;
+    }
+
+    &--alarm::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/advantages/alarm.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #68b738;
+      left: 0;
+      top: -3px;
+    }
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .advantages-lsit__item {
     width: 246px;
-    padding: 0;
+    padding: 151px 0 57px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+
+    &--leaf::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 280px;
+      background-image: url("../img/advantages/number-one.svg");
+      background-repeat: no-repeat;
+      top: 40px;
+      right: -15px;
+      z-index: -1;
+    }
+
+    &--leaf::before {
+      content: "";
+      position: absolute;
+      width: 86px;
+      height: 80px;
+      background-image: url("../img/advantages/icon_leaf.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #68b738;
+      left: 0;
+      top: 40px;
+    }
+
+    &--spoon::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 280px;
+      background-image: url("../img/advantages/number_three.svg");
+      background-repeat: no-repeat;
+      top: 40px;
+      right: -15px;
+      z-index: -1;
+    }
+
+    &--spoon::before {
+      content: "";
+      position: absolute;
+      width: 86px;
+      height: 80px;
+      background-image: url("../img/advantages/spoon.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #68b738;
+      left: 0;
+      top: 40px;
+    }
+
+    &--mix::after {
+      content: "";
+      position: absolute;
+      width: 134px;
+      height: 280px;
+      background-image: url("../img/advantages/number_two.svg");
+      background-repeat: no-repeat;
+      top: 40px;
+      right: -15px;
+      z-index: -1;
+    }
+
+    &--mix::before {
+      content: "";
+      position: absolute;
+      width: 86px;
+      height: 80px;
+      background-image: url("../img/advantages/mix.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #68b738;
+      left: 0;
+      top: 40px;
+    }
+
+    &--alarm::after {
+      content: "";
+      position: absolute;
+      width: 134px;
+      height: 280px;
+      background-image: url("../img/advantages/number_four.svg");
+      background-repeat: no-repeat;
+      top: 40px;
+      right: -15px;
+      z-index: -1;
+    }
+
+    &--alarm::before {
+      content: "";
+      position: absolute;
+      width: 86px;
+      height: 80px;
+      background-image: url("../img/advantages/alarm.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #68b738;
+      left: 0;
+      top: 40px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-lsit__text-wrapper--first-paragraph {
+    width: 130px;
+    margin: 0;
+    display: block;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-lsit__text-wrapper--second-paragraph {
+    width: 190px;
+    display: block;
   }
 }

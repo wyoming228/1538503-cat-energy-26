@@ -10,7 +10,7 @@
 
 <body class="page__body">
   <header class="main-header">
-    <div class="main-header__wrapper main-header__wrapper--cat-background">
+    <div class="main-header__wrapper">
       <div class="main-header__logo-wrapper">
         <a class="main-header__cat-logo">
           <img class="main-header__cat-logo-pic" src="img/logo_cat-energy-pic.svg" width="33" height="37"
@@ -20,21 +20,19 @@
           <img class="logo__image" src="img/logo_cat-energy-text.svg" width="101" height="18"
             alt="Текстовый логотип магазина cat energy">
         </a>
+
       </div>
-      <button class="main-header__main-nav__toggle button" type="button"><span class="visually-hidden">Открыть
-          меню</span></button>
-      <div class="main-nav__wrapper">
-        <ul class="main-header__main-nav-list site-list">
-          <li class="site-list__item site-list__item--current">
-            <a class="site-list__link site-list__link--modified" href="#">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link site-list__link--modified" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link site-list__link--modified" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
+
+      <div class="main-nav__wrapper main-nav--closed main-nav--nojs main-nav--cat-background">
+        <button class="main-header__main-nav-toggle button button--toggle" type="button"><span
+            class="visually-hidden">Открыть
+            меню</span></button>
+        <div class="main-header__main-nav-list site-list">
+          <a class="site-list__link site-list__link--modified site-list__link--current site-list__link--current-modified"
+            href="#">Главная</a>
+          <a class="site-list__link site-list__link--modified" href="catalog.html">Каталог продукции</a>
+          <a class="site-list__link site-list__link--modified" href="form.html">Подбор программы</a>
+        </div>
       </div>
     </div>
 
@@ -46,14 +44,16 @@
           питание для котов</h1>
         <p class="nutrition-programm__slogan">Занялся собой? Займись котом!</p>
         <div class="nutrition-programm__img-wrapper">
-          <img class="nutrition-programm__img-wrapper-pic" src="./img/index-can-mobile.png" width="280" height="270"
-            alt="Изображение котика">
+          <img class="nutrition-programm__img-wrapper-pic nutrition-programm__img-wrapper-pic--mobile"
+            src="./img/index-can-mobile.png" width="280" height="270">
+          <img class="nutrition-programm__img-wrapper-pic nutrition-programm__img-wrapper-pic--desktop"
+            src="./img/index-can-desktop.png" width="552" height="449" alt="Изображение котика">
         </div>
         <a class="nutrition-programm__link button button--nutrition-link" href="#">Подобрать программу</a>
       </div>
       <div class="nutrition-programm__programm-selection programm-selection">
         <ul class="programm-selection__list">
-          <li class="programm-selection__item">
+          <li class="programm-selection__item programm-selection__item--cat">
             <h2 class="programm-selection__title">Похудение</h2>
             <p class="programm-selection__describtion">Ваш кот весит больше собаки и почти утратил способность лазить
               по
@@ -61,7 +61,7 @@
             </p>
             <a class="programm-selection__link" href="#">Каталог slim</a>
           </li>
-          <li class="programm-selection__item">
+          <li class="programm-selection__item programm-selection__item--panther">
             <h2 class="programm-selection__title">Набор массы</h2>
             <p class="programm-selection__describtion">Заработать авторитет среди дворовых котов и даже собак? Серия
               Cat
@@ -77,19 +77,23 @@
       <div class="advantages__wrapper">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages advantages-list">
-          <li class="advantages-lsit__item">Функциональное питание
+          <li class="advantages-lsit__item advantages-lsit__item--leaf">Функциональное питание
             содержит только полезные
             питательные вещества.
           </li>
-          <li class="advantages-lsit__item">Выпускается в виде порошка,
+          <li class="advantages-lsit__item advantages-lsit__item--mix">Выпускается в виде порошка,
             который нужно лишь залить
             кипятком и готово.
           </li>
-          <li class="advantages-lsit__item">Замените один-два приема
+          <li class="advantages-lsit__item advantages-lsit__item--spoon">Замените один-два приема
             обычной еды на наше
             функциональное питание.
           </li>
-          <li class="advantages-lsit__item">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+          <li class="advantages-lsit__item advantages-lsit__item--alarm">
+            <span class="advantages-lsit__text-wrapper advantages-lsit__text-wrapper--first-paragraph">Уже через месяц
+              наслаждайтесь</span>
+            <span class="advantages-lsit__text-wrapper advantages-lsit__text-wrapper--second-paragraph">изменениями к
+              лучшему вашего питомца!</span>
           </li>
         </ul>
       </div>
@@ -101,13 +105,13 @@
           Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
           часов в день.</p>
         <div class="results__list__wrapper">
-          <div class="results__list-value-wrapper">
+          <div class="results__list__value-wrapper">
             <dl class="results__list">
               <div class="results__item">
                 <dt class="results__number">
                   5 кг
                 </dt>
-                <dd class="results__description">
+                <dd class="results__description results__description--weight">
                   снижение веса
                 </dd>
               </div>
@@ -117,26 +121,26 @@
                 <dt class="results__number">
                   60 дней
                 </dt>
-                <dd class="results__description">
+                <dd class="results__description results__description--days">
                   затрачено времени
                 </dd>
               </div>
             </dl>
           </div>
-          <p class="results__food-expenses">Затраты на питание: 15 000 РУБ.</p>
+          <p class="results__food-expenses">Затраты на питание: <span class="results__food-price">15 000 РУБ.</span>
+          </p>
         </div>
-
         <div class="results__results-photo-wrapper">
-          <img class="results__results-image" src="./img/results-cat_mobile.png" width="280" height="232"
+          <img class="results__results-image" src="./img/results-cat_moblie.png" width="280" height="232"
             alt="Фото до и после">
           <img class="results__results-image__tablet" src="./img/results-cat_tablet.png" width="592" height="511"
             alt="Фото до и после">
           <div class="results__range-scale-wrapper">
-          <label class="results__label visually-hidden" for="range-scale">Было</label>
-          <span class="results__toggle toggle-min">Было</span>
-          <input class="results__range-scale" type="range" min="0" max="15" name="changes-scale" id="range-scale">
-          <span class="results__toggle toggle-max">Стало</span>
-        </div>
+            <label class="results__label visually-hidden" for="range-scale">Было</label>
+            <span class="results__toggle toggle-min">Было</span>
+            <input class="results__range-scale" type="range" min="0" max="15" name="changes-scale" id="range-scale">
+            <span class="results__toggle toggle-max">Стало</span>
+          </div>
         </div>
       </div>
     </section>
@@ -148,13 +152,14 @@
           <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
           <address class="cooperation__contact-address">ул. Большая
             Конюшенная, д. 19/8
-            Санкт-Петербург</address>
+            <span class="cooperation__paragraph">Санкт-Петербург</span>
+          </address>
         </div>
         <div class="cooperation__map-wrapper">
-        <iframe class="cooperation__map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1659284223564!5m2!1sru!2sru"
-          width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe class="cooperation__map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1659284223564!5m2!1sru!2sru"
+            width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
       <div class="main-footer__menu-wrapper">
@@ -206,6 +211,7 @@
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>

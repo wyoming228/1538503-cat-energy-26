@@ -3,16 +3,26 @@
   padding: 25px 20px 40px;
   background-color: #eaeaea;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     width: 708px;
     padding: 0 30px;
-    margin-bottom: 20px;
     background-color: #ffffff;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: @desktop-width) {
     width: 1220px;
     padding: 70px 110px 75px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 462px;
+      background-color: #f2f2f2;
+      left: 0;
+      bottom: 0;
+    }
   }
 }
 
@@ -27,7 +37,12 @@
   font-size: 36px;
   line-height: 40px;
 
-  @media (min-width: 1200px) {
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
     margin-bottom: 146px;
   }
 }
@@ -40,7 +55,13 @@
   line-height: 18px;
   color: #444444;
 
-  @media (min-width: 1200px) {
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
     width: 463px;
     margin-bottom: 69px;
   }
@@ -48,6 +69,26 @@
 
 .results__list {
   margin: 0;
+
+  @media (max-width: @mobile-width-only) {
+    width: 124px;
+    padding: 14px 0 10px;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 161px;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    position: relative;
+    margin-right: 42px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .results__number {
@@ -56,6 +97,14 @@
   color: #000000;
   text-transform: uppercase;
   margin-bottom: 7px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+    margin: 0;
+    text-align: center;
+    padding: 15px 0 15px;
+  }
 }
 
 .results__description {
@@ -64,6 +113,41 @@
   line-height: 12px;
   color: #444444;
   margin: 0;
+
+  @media (max-width: @mobile-width-only) {
+    width: 77px;
+    margin: 0 auto;
+    padding: 0 6px 0;
+    background-color: #eaeaea;
+    position: absolute;
+    left: 18px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #ffffff;
+
+    &--weight {
+      width: 114px;
+      position: absolute;
+      bottom: -6px;
+      left: 24px;
+    }
+
+    &--days {
+      width: 142px;
+      position: absolute;
+      bottom: -6px;
+      left: 10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-color: #f2f2f2;
+    }
+  }
 }
 
 .results__food-expenses {
@@ -71,25 +155,54 @@
   margin-bottom: 40px;
   font-size: 14px;
   line-height: 18px;
+  text-transform: uppercase;
   color: #000000;
 
-  @media (min-width: 768px) {
+
+  @media (max-width: @mobile-width-only) {
+    text-align: center;
+  }
+
+  @media (min-width: @tablet-width) {
     margin: 0;
+    font-size: 20px;
+    line-height: 24px;
+    width: 174px;
+    align-self: center;
+    text-align: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 330px;
+    text-align: start;
   }
 }
 
 .results__list__wrapper {
   margin-bottom: 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 250px;
+  }
+}
+
+.results__list__value-wrapper {
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 34px;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: @tablet-width) {
     display: flex;
-    flex-direction: column;
-    gap: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    margin-bottom: 55px;
   }
 }
 
@@ -110,9 +223,15 @@
 .results__results-image__tablet {
   display: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     display: block;
     margin: 0 auto;
+    transform: translateY(-155px);
+  }
+
+  @media (min-width: @desktop-width) {
+    transform: translateY(0);
+    display: block;
   }
 }
 
@@ -123,16 +242,37 @@
 }
 
 .results__range-scale-wrapper {
-  @media (min-width: 768px) {
-    width: auto;
-    text-align: center;
+  width: auto;
+  text-align: center;
+  display: none;
+}
+
+.results__results-photo-wrapper {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    height: 462px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 
-@media (min-width: 1200px) {
-  .results__results-photo-wrapper {
+.results__results-photo-wrapper::before {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    content: "";
     position: absolute;
-    right: 0;
-    top: 0;
+    width: 768px;
+    height: 462px;
+    background-color: #eaeaea;
+    left: -30px;
+  }
+}
+
+.results__food-price {
+  @media (min-width: @desktop-width) {
+    margin-left: 63px;
   }
 }

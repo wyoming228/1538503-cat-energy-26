@@ -23,9 +23,22 @@
   font-size: 24px;
   line-height: 33px;
   text-transform: uppercase;
+  text-align: start;
   font-weight: 400;
   margin: 0;
   margin-bottom: 29px;
+  padding-left: 69px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 73px;
+    padding-left: 162px;
+  }
 }
 
 .programm-selection__describtion {
@@ -35,15 +48,127 @@
   line-height: 18px;
   text-align: justify;
   width: 227px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    min-width: 340px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    min-width: 460px;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .programm-selection__describtion::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 1px;
+    background-color: #d9d9d9;
+    left: 20px;
+    bottom: 57px;
+  }
 }
 
 .programm-selection__item {
-  padding: 30px 33px 18px 20px;
-  margin-bottom: 20px;
-  background-color: #f2f2f2;
+  @media (max-width: @tablet-width) {
+    padding: 30px 33px 18px 20px;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    position: relative;
 
-  &:last-child {
+    &--cat::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 53px;
+      background-image: url("../img/cat_back.png");
+      background-repeat: no-repeat;
+      top: 21px;
+      left: 22px;
+    }
+
+    &--panther::before {
+      content: "";
+      position: absolute;
+      width: 67px;
+      height: 50px;
+      background-image: url("../img/panthera_background.png");
+      background-repeat: no-repeat;
+      top: 24px;
+      left: 13px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: #f2f2f2;
+    padding: 77px 0 53px 52px;
+    position: relative;
+
+    &:first-child {
+      margin-bottom: 30px;
+    }
+
+    &--cat::before {
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 211px;
+      background-image: url("../img/cat_background-tablet.png");
+      background-repeat: no-repeat;
+      top: 81;
+      right: 62px;
+    }
+
+    &--panther::before {
+      content: "";
+      position: absolute;
+      width: 268px;
+      height: 200px;
+      background-image: url("../img/panthera_background-tablet.png");
+      background-repeat: no-repeat;
+      top: 91;
+      right: 28px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 517px;
     margin-bottom: 0;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
+
+    &--cat::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 106px;
+      background-image: url("../img/cat_background-desktop.png");
+      background-repeat: no-repeat;
+      top: 41px;
+      left: 52px;
+    }
+
+    &--panther::before {
+      content: "";
+      position: absolute;
+      width: 134px;
+      height: 100px;
+      background-image: url("../img/panthera_background-desktop.png");
+      background-repeat: no-repeat;
+      top: 47px;
+      left: 33px;
+    }
   }
 
   @media (min-width: 1200px) {
@@ -60,4 +185,30 @@
   text-align: start;
   text-decoration: none;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 32px;
+      height: 11px;
+      background-image: url("../img/icon_arrow.png");
+      left: 188px;
+      bottom: 64px;
+    }
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .programm-selection__link&::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 11px;
+    background-image: url("../img/icon_arrow.png");
+    left: 120px;
+  }
 }
