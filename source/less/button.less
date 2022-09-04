@@ -8,26 +8,19 @@
   cursor: pointer;
   border: none;
 
-  &--nutrition-link {
-    display: block;
-    padding: 11px 0;
-    max-width: 240px;
-    margin: 0 auto;
-    margin-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+  }
 
-    @media (min-width: @tablet-width) {
-      margin: 0;
-      margin-right: auto;
-      font-size: 20px;
-      line-height: 20px;
-      font-weight: 400;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding: 17px 0;
-    }
+  @media (min-width: @desktop-width) {
+    padding: 17px 0;
   }
 }
+
 
 .button--toggle {
   background-color: #ffffff;
@@ -37,14 +30,17 @@
   grid-column-start: 1;
   grid-column-end: 3;
   padding: 10px 0;
+  width: 100%;
 }
 
 .button--all {
-  padding: 8px 0;
+  padding: 10px 0;
   text-decoration: none;
   background-color: #f2f2f2;
   color: #444444;
   text-align: center;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .button--to-chart-extras {
@@ -66,5 +62,18 @@
   @media (min-width: @desktop-width) {
     width: 568px;
     margin-right: 81px;
+  }
+}
+
+.button--nutrition-link {
+  display: block;
+  padding: 11px 0;
+  max-width: 240px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: @tablet-width) {
+    margin: 0 auto;
   }
 }

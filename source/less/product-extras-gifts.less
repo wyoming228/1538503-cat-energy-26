@@ -13,11 +13,16 @@
 .product-extras-gifts {
   width: 280px;
   height: 290px;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/backpack-cat_desktop.png");
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/extras-background_mobile.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-color: rgba(104, 183, 56, 0.85);
   position: relative;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/extras-background_mobile@2x.jpg");
+    background-size: 100% auto;
+  }
 
   @media (max-width: @tablet-width) {
     &::before {
@@ -35,11 +40,17 @@
   @media (min-width: @tablet-width) {
     width: auto;
     height: 200px;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/extras-image_tablet.jpg");
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/extras-background_tablet.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     background-color: rgba(104, 183, 56, 0.85);
     position: relative;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/extras-background_tablet@2x.jpg");
+      background-size: 100% 100%;
+    }
 
     &::before {
       content: "";
@@ -53,13 +64,17 @@
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: @desktop-width) {
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/backpack-cat_desktop.png");
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgba(104, 183, 56, 0.85);
     width: 245px;
     height: 288px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/extras-background_desktop@2x.jpg");
+    }
   }
 }
 

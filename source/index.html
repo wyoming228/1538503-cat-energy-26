@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="img/favicons/apple.png" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -13,8 +16,12 @@
     <div class="main-header__wrapper">
       <div class="main-header__logo-wrapper">
         <a class="main-header__cat-logo">
-          <img class="main-header__cat-logo-pic" src="img/logo_cat-energy-pic.svg" width="33" height="37"
-            alt="Логотип магазина cat energy с котиком">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/header-logo_desktop.svg" width="202" height="59">
+            <source media="(min-width: 768px)" srcset="img/header-logo_tablet.svg" width="174" height="51">
+            <img class="main-header__cat-logo-pic" src="img/logo_cat-energy-pic.svg" width="33" height="37"
+              alt="Логотип магазина cat energy с котиком">
+          </picture>
         </a>
         <a class="main-header__text-logo logo">
           <img class="logo__image" src="img/logo_cat-energy-text.svg" width="101" height="18"
@@ -44,10 +51,17 @@
           питание для котов</h1>
         <p class="nutrition-programm__slogan">Занялся собой? Займись котом!</p>
         <div class="nutrition-programm__img-wrapper">
-          <img class="nutrition-programm__img-wrapper-pic nutrition-programm__img-wrapper-pic--mobile"
-            src="./img/index-can-mobile.png" width="280" height="270">
-          <img class="nutrition-programm__img-wrapper-pic nutrition-programm__img-wrapper-pic--desktop"
-            src="./img/index-can-desktop.png" width="552" height="449" alt="Изображение котика">
+          <picture>
+            <source media="(min-width: 1200px)"
+              srcset="./img/index/index-can_desktop.png 1x, ./img/index/index-can_desktop@2x.png 2x" width="552"
+              height="499">
+            <source media="(min-width: 768px)"
+              srcset="./img/index/index-can_tablet.png 1x, ./img/index/index-can_tablet@2x.png 2x" width="709"
+              height="609">
+            <img class="nutrition-programm__img-wrapper-pic nutrition-programm__img-wrapper-pic--mobile"
+              srcset="./img/index/index-can-mobile.png 1x, ./img/index/index-can_mobile@2x.png 2x" width="280"
+              height="270">
+          </picture>
         </div>
         <a class="nutrition-programm__link button button--nutrition-link" href="#">Подобрать программу</a>
       </div>
@@ -131,16 +145,13 @@
           </p>
         </div>
         <div class="results__results-photo-wrapper">
-          <img class="results__results-image" src="./img/results-cat_moblie.png" width="280" height="232"
-            alt="Фото до и после">
-          <img class="results__results-image__tablet" src="./img/results-cat_tablet.png" width="592" height="511"
-            alt="Фото до и после">
-          <div class="results__range-scale-wrapper">
-            <label class="results__label visually-hidden" for="range-scale">Было</label>
-            <span class="results__toggle toggle-min">Было</span>
-            <input class="results__range-scale" type="range" min="0" max="15" name="changes-scale" id="range-scale">
-            <span class="results__toggle toggle-max">Стало</span>
-          </div>
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="./img/index/results-cat_tablet.png 1x, ./img/index/results-cat_tablet@2x.png 2x" width="560">
+            <img class="results__results-image" src="./img/results-cat_moblie.png"
+              srcset="./img/index/results-cat_moblie@2x.png 2x" width="280" height="232" alt="Фото до и после">
+          </picture>
+          <input class="results__range-scale" type="range" step="1" />
         </div>
       </div>
     </section>

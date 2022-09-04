@@ -3,6 +3,7 @@
   margin-bottom: 11px;
   padding: 0;
   list-style-type: none;
+  counter-reset: number 0;
 
   @media (min-width: 768px) {
     width: auto;
@@ -28,6 +29,7 @@
   line-height: 18px;
   color: #444444;
   position: relative;
+  counter-increment: number;
 
   &:last-child {
     margin-bottom: 0;
@@ -98,14 +100,14 @@
     line-height: 24px;
 
     &--leaf::after {
-      content: "";
+      content: counter(number);
       position: absolute;
-      width: 120px;
-      height: 280px;
-      background-image: url("../img/advantages/number-one.svg");
-      background-repeat: no-repeat;
-      top: 40px;
-      right: -15px;
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      top: 0;
+      right: 0;
       z-index: -1;
     }
 
@@ -123,14 +125,14 @@
     }
 
     &--spoon::after {
-      content: "";
+      content: counter(number);
       position: absolute;
-      width: 120px;
-      height: 280px;
-      background-image: url("../img/advantages/number_three.svg");
-      background-repeat: no-repeat;
-      top: 40px;
-      right: -15px;
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      top: 0;
+      right: 0;
       z-index: -1;
     }
 
@@ -148,14 +150,14 @@
     }
 
     &--mix::after {
-      content: "";
+      content: counter(number);
       position: absolute;
-      width: 134px;
-      height: 280px;
-      background-image: url("../img/advantages/number_two.svg");
-      background-repeat: no-repeat;
-      top: 40px;
-      right: -15px;
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      top: 0;
+      right: 0;
       z-index: -1;
     }
 
@@ -173,14 +175,14 @@
     }
 
     &--alarm::after {
-      content: "";
+      content: counter(number);
       position: absolute;
-      width: 134px;
-      height: 280px;
-      background-image: url("../img/advantages/number_four.svg");
-      background-repeat: no-repeat;
-      top: 40px;
-      right: -15px;
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      top: 0;
+      right: 0;
       z-index: -1;
     }
 
