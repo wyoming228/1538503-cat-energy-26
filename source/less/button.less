@@ -8,6 +8,14 @@
   cursor: pointer;
   border: none;
 
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
     margin: 0;
     margin-right: auto;
@@ -18,6 +26,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 17px 0;
+    margin-right: 0;
   }
 }
 
@@ -31,6 +40,10 @@
   grid-column-end: 3;
   padding: 10px 0;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
 }
 
 .button--all {
@@ -41,11 +54,25 @@
   text-align: center;
   margin: 0 auto;
   width: 100%;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
 }
 
 .button--to-chart-extras {
-  @media (min-width: 1200px) {
-    width: 224px;
+  @media (min-width: @desktop-width) {
+    width: 244px;
+    margin-left: auto;
   }
 }
 
@@ -57,6 +84,7 @@
   @media (min-width: @tablet-width) {
     width: 282px;
     margin-right: 61px;
+    padding: 16px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -67,13 +95,21 @@
 
 .button--nutrition-link {
   display: block;
-  padding: 11px 0;
-  max-width: 240px;
+  padding: 12px 0;
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
+  font-size: 14px;
+  line-height: 18px;
 
   @media (max-width: @tablet-width) {
     margin: 0 auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    padding: 17px 1px 17px;
+    font-size: 20px;
+    line-height: 20px;
   }
 }

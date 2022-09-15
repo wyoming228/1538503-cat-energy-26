@@ -1,6 +1,7 @@
 .product-extras {
   width: 280px;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 0 20px 35px;
   position: relative;
 
   @media (max-width: @mobile-width-only) {
@@ -22,8 +23,8 @@
       width: 320px;
       height: 2px;
       background-color: #68b738;
-      right: 0;
-      top: 22px;
+      right: -29px;
+      top: 64px;
     }
   }
 
@@ -35,7 +36,7 @@
       height: 2px;
       background-color: #68b738;
       right: -110px;
-      top: 22px;
+      top: 101px;
     }
   }
 
@@ -58,7 +59,7 @@
 
 .product-extras__title {
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 35px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -76,20 +77,37 @@
     font-size: 36px;
     line-height: 36px;
     width: 358px;
+    margin-bottom: 80px;
+    padding-left: 38px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 81px;
+    padding-left: 0;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 70px;
-    height: 2px;
-    background-color: #68b738;
-    left: -110px;
-    top: 22px;
+  @media (min-width: @tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: #68b738;
+      left: -29px;
+      top: 22px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 2px;
+      background-color: #68b738;
+      left: -110px;
+      top: 22px;
+    }
   }
 }
 
