@@ -3,9 +3,42 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #222222;
+  padding-left: 45px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+.programm-type__label:hover .programm-type__control-mark {
+  border: 1px solid #bababa;
+}
+
+.porgramm-type__input-field:disabled + .programm-type__control-mark {
+  opacity: 30%;
+}
+
+.programm-type__control-mark {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  position: absolute;
+  border-radius: 50%;
+  left: -1px;
+  top: -7px;
+
+  @media (min-width: @tablet-width) {
+    width: 37px;
+    height: 37px;
+    left: -13px;
+    top: -4px;
+  }
+}
+
+.porgramm-type__input-field[type="radio"]:checked + .programm-type__control-mark {
+  background-image: url("../img/radiobutton-active.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }

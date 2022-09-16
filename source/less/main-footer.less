@@ -1,5 +1,6 @@
 .main-footer {
   width: 320px;
+  margin: 0 auto;
 
   @media (min-width: 768px) {
     width: 768px;
@@ -36,19 +37,38 @@
 
 .main-footer__text-logo {
   display: block;
-  padding: 38px 80px 31px;
+  padding: 38px 76px 31px;
+  cursor: pointer;
 
-  @media (min-width: 768px) {
-    padding: 63px 0;
+  @media (min-width: @tablet-width) {
+    padding: 57px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 62px 0;
+  }
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
   }
 }
 
 .main-footer__social {
-  padding: 20px 0;
+  padding: 20px 0 17px;
   border-bottom: 1px #d9d9d9 solid;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     border: none;
+    padding: 11px 0 17px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 0 16px 28px;
   }
 }
 

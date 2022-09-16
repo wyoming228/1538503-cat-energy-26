@@ -61,11 +61,29 @@
   }
 }
 
+.pet-parent-info__label:hover .pet-parent-info__input-field {
+  border: 1px solid #bababa;
+}
+
+.pet-parent-info__label:focus {
+  border: 2px #444444 solid;
+  outline: none;
+}
+
+.pet-parent-info__svg {
+  position: absolute;
+  right: 15px;
+
+  @media (min-width: @desktop-width) {
+    right: 18px;
+  }
+}
+
 .pet-parent-info__legend {
   font-size: 24px;
   line-height: 26px;
   color: #000000;
-  padding-top: 26px;
+  padding-top: 25px;
   margin-bottom: 36px;
   position: relative;
   background-color: #ffffff;
@@ -87,6 +105,10 @@
   }
 }
 
+.pet-parent-info__svg--email {
+  stroke: #222222;
+}
+
 .pet-parent-info__label {
   font-size: 16px;
   line-height: 18px;
@@ -94,6 +116,7 @@
   color: #444444;
   display: flex;
   align-items: center;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -101,14 +124,14 @@
   }
 }
 
-.pet-parent-info__input-field--email {
-  background-image: url("../img/email-icon.png");
-  background-repeat: no-repeat;
-  background-position: 95%;
+.pet-parent-info__input-field:focus + .pet-parent-info__svg {
+  stroke: #68b738;
 }
 
-.pet-parent-info__input-field--phone {
-  background-image: url("../img/phone-icon.png");
-  background-repeat: no-repeat;
-  background-position: 96%;
+.pet-parent-info__input-field:invalid {
+  border: 1px #ff8282 solid;
+}
+
+.pet-parent-info__input-field:invalid + .pet-parent-info__svg {
+  stroke: #ff8282;
 }

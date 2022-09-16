@@ -26,13 +26,14 @@
   text-align: start;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 32px;
   padding-left: 69px;
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 26px;
   }
 
   @media (min-width: @desktop-width) {
@@ -43,22 +44,24 @@
 
 .programm-selection__describtion {
   font-family: "Arial", sans-serif;
-  margin: 0 0 38px 0;
+  margin: 0 0 40px 0;
   font-size: 14px;
   line-height: 18px;
-  text-align: justify;
+  text-align: start;
   width: 227px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
     min-width: 340px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 16px;
     line-height: 24px;
-    min-width: 460px;
+    min-width: 462px;
+    margin-bottom: 26px;
   }
 }
 
@@ -76,7 +79,7 @@
 
 .programm-selection__item {
   @media (max-width: @tablet-width) {
-    padding: 30px 33px 18px 20px;
+    padding: 30px 33px 25px 20px;
     margin-bottom: 20px;
     background-color: #f2f2f2;
     position: relative;
@@ -86,9 +89,9 @@
       position: absolute;
       width: 50px;
       height: 53px;
-      background-image: url("../img/cat_back.png");
+      background-image: url("../img/index/cat_background-mobile.png");
       background-repeat: no-repeat;
-      top: 21px;
+      top: 20px;
       left: 22px;
     }
 
@@ -97,7 +100,7 @@
       position: absolute;
       width: 67px;
       height: 50px;
-      background-image: url("../img/panthera_background.png");
+      background-image: url("../img/index/panthera_background-mobile.png");
       background-repeat: no-repeat;
       top: 24px;
       left: 13px;
@@ -110,7 +113,7 @@
 
   @media (min-width: @tablet-width) {
     background-color: #f2f2f2;
-    padding: 77px 0 53px 52px;
+    padding: 77px 0 56px 51px;
     position: relative;
 
     &:first-child {
@@ -122,10 +125,10 @@
       position: absolute;
       width: 200px;
       height: 211px;
-      background-image: url("../img/cat_background-tablet.png");
+      background-image: url("../img/index/cat_background-tablet.png");
       background-repeat: no-repeat;
-      top: 81;
-      right: 62px;
+      top: 82px;
+      right: 59px;
     }
 
     &--panther::before {
@@ -133,9 +136,9 @@
       position: absolute;
       width: 268px;
       height: 200px;
-      background-image: url("../img/panthera_background-tablet.png");
+      background-image: url("../img/index/panthera_background-tablet.png");
       background-repeat: no-repeat;
-      top: 91;
+      top: 91px;
       right: 28px;
     }
   }
@@ -153,7 +156,7 @@
       position: absolute;
       width: 100px;
       height: 106px;
-      background-image: url("../img/cat_background-desktop.png");
+      background-image: url("../img/index/cat_background-desktop.png");
       background-repeat: no-repeat;
       top: 41px;
       left: 52px;
@@ -164,7 +167,7 @@
       position: absolute;
       width: 134px;
       height: 100px;
-      background-image: url("../img/panthera_background-desktop.png");
+      background-image: url("../img/index/panthera_background-desktop.png");
       background-repeat: no-repeat;
       top: 47px;
       left: 33px;
@@ -186,6 +189,16 @@
   text-decoration: none;
   color: #000000;
 
+  &:hover::before {
+    background-image: url("../img/index/icon-arrow_hover.png");
+    background-repeat: no-repeat;
+    background-position: 48% 32%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
@@ -196,8 +209,16 @@
       width: 32px;
       height: 11px;
       background-image: url("../img/icon_arrow.png");
-      left: 188px;
-      bottom: 64px;
+      left: 184px;
+      bottom: 65px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "";
+      left: 186px;
+      bottom: 67px;
     }
   }
 }
@@ -209,6 +230,7 @@
     width: 32px;
     height: 11px;
     background-image: url("../img/icon_arrow.png");
+    background-repeat: no-repeat;
     left: 120px;
   }
 }

@@ -8,21 +8,23 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     width: auto;
     display: flex;
     justify-content: space-between;
-    padding: 56px 70px;
+    padding: 60px 70px 60px;
   }
 
-  @media (min-width: 1200px) {
-    width: 480px;
+  @media (min-width: @desktop-width) {
+    width: 426px;
     display: flex;
+    justify-content: flex-start;
     position: absolute;
     z-index: 100;
     background-color: #ffffff;
-    transform: translateY(170px);
+    transform: translateY(94px);
     margin-left: 110px;
+    padding: 60px 70px 60px;
   }
 }
 
@@ -38,6 +40,10 @@
     font-size: 20px;
     line-height: 26px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 10px;
+  }
 }
 
 .cooperation__contact-address {
@@ -46,11 +52,16 @@
   line-height: 20px;
   font-style: normal;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     width: 171px;
     font-size: 16px;
     line-height: 20px;
     text-align: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: start;
+    margin-left: 80px;
   }
 }
 
@@ -69,7 +80,7 @@
 .cooperation__map-wrapper {
   @media (min-width: 768px) {
     position: relative;
-    padding: 0 0 56.5% 0;
+    padding: 0 0 53% 0;
     height: 0;
     overflow: hidden;
   }
@@ -85,6 +96,6 @@
 .cooperation__paragraph {
   @media (min-width: @tablet-width) {
     display: block;
-    padding-top: 14px;
+    padding-top: 18px;
   }
 }

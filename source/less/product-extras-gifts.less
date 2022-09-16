@@ -1,12 +1,12 @@
 .product-extras {
-  @media (min-width: 768px) {
+  @media (min-width: @tablet-width) {
     width: auto;
-    padding: 0 30px 76px;
+    padding: 43px 0 76px;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: @desktop-width) {
     width: auto;
-    padding: 0 0 30px;
+    padding: 79px 0 50px;
   }
 }
 
@@ -59,7 +59,7 @@
       height: 82px;
       background-image: url("../img/catalog/gift-icon_tablet.png");
       background-position: center;
-      left: 77px;
+      left: 84px;
       top: 57px;
     }
   }
@@ -78,6 +78,18 @@
   }
 }
 
+.product-extras-gifts__wrapper {
+  padding-top: 35px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding-top: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
+}
+
 .product-extras-gifts__title {
   padding-top: 186px;
   font-family: "Arial", sans-serif;
@@ -86,9 +98,10 @@
   max-width: 161px;
   color: #ffffff;
   margin: 0 auto;
+  text-align: center;
 
   @media (min-width: 768px) {
-    padding: 71px 0 0 315px;
+    padding: 71px 0 0 305px;
     text-align: start;
     margin-left: auto;
   }
@@ -96,6 +109,6 @@
   @media (min-width: @desktop-width) {
     text-align: center;
     padding: 0;
-    transform: translateY(190px);
+    transform: translateY(186px);
   }
 }
