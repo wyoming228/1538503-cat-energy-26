@@ -11,6 +11,8 @@ import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import {deleteAsync} from 'del';
+import minify from 'gulp-minify';
+
 
 // Styles
 
@@ -31,6 +33,7 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build'));
 }
 
@@ -38,9 +41,11 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src('source/js/*.js')
-  .pipe(gulp.dest('build/js'))
-  .pipe(browser.stream());
-  }
+    .pipe(minify({
+      noSource: true
+    }))
+    .pipe(gulp.dest('build/js'));
+}
 
 // Images
 
