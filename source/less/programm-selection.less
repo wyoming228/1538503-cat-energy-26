@@ -113,7 +113,7 @@
 
   @media (min-width: @tablet-width) {
     background-color: #f2f2f2;
-    padding: 77px 0 56px 51px;
+    padding: 77px 57px 56px 51px;
     position: relative;
 
     &:first-child {
@@ -144,9 +144,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 517px;
-    margin-bottom: 0;
-
     &:first-child {
       margin-bottom: 0;
     }
@@ -174,8 +171,7 @@
     }
   }
 
-  @media (min-width: 1200px) {
-    width: 517px;
+  @media (min-width: @desktop-width) {
     margin-bottom: 0;
   }
 }
@@ -189,12 +185,6 @@
   text-decoration: none;
   color: #000000;
 
-  &:hover::before {
-    background-image: url("../img/index/icon-arrow_hover.png");
-    background-repeat: no-repeat;
-    background-position: 48% 32%;
-  }
-
   &:active {
     opacity: 30%;
   }
@@ -202,35 +192,28 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 32px;
-      height: 11px;
-      background-image: url("../img/icon_arrow.png");
-      left: 184px;
-      bottom: 65px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &::before {
-      content: "";
-      left: 186px;
-      bottom: 67px;
-    }
   }
 }
 
-@media (max-width: @tablet-width) {
-  .programm-selection__link&::before {
-    content: "";
-    position: absolute;
-    width: 32px;
-    height: 11px;
-    background-image: url("../img/icon_arrow.png");
-    background-repeat: no-repeat;
-    left: 120px;
-  }
+.programm-selection__link:hover + .programm-selection__link-arrow {
+  background-image: url("../img/index/icon-arrow_hover.png");
+  background-repeat: no-repeat;
+  background-position: 48% 32%;
+}
+
+.programm-selection__link:active + .programm-selection__link-arrow {
+  opacity: 30%;
+}
+
+.programm-selection__link-arrow {
+  display: block;
+  width: 32px;
+  height: 11px;
+  background-image: url("../img/icon_arrow.png");
+  align-self: center;
+  margin-left: 25px;
+}
+
+.programm-selection__wrapper {
+  display: flex;
 }

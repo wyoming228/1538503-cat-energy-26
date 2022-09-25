@@ -6,16 +6,15 @@
   cursor: pointer;
 }
 
-.copyright:hover .copyright__link-logo {
-  stroke: #68b738;
-}
-
-.copyright:active .copyright__link-logo {
-  stroke: #68b738;
-  opacity: 60%;
+.copyright:hover .copyright__link {
+  color: #68b738;
 }
 
 .copyright:active .copyright__text {
+  opacity: 60%;
+}
+
+.copyright:active .copyright__link {
   opacity: 60%;
 }
 
@@ -32,6 +31,12 @@
 }
 
 .copyright__link {
+  color: #666666;
+
+  &:hover {
+    color: #68b738;
+  }
+
   @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     margin-left: 25px;
   }
